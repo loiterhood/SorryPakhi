@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Roshmalaiiiii 💚</title>
+<meta name="description" content="A tiny apology from Laddooo to Roshmalaiiiii.">
+<style>
+:root{
+  --green:#006A4E;
+  --green-dark:#004d39;
+  --green-soft:#e8f4ef;
+  --cream:#fffaf3;
+  --ink:#17352d;
+  --pink:#f7b6c8;
+  --white:#fff;
+  --shadow:0 18px 50px rgba(0,70,50,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(247,182,200,.25), transparent 24%),
+    radial-gradient(circle at 90% 20%, rgba(0,106,78,.12), transparent 26%),
+    var(--cream);
+  font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;
+  overflow-x:hidden;
+}
+button{font:inherit}
+.page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px 16px;
+  position:relative;
+}
+.card{
+  width:min(920px,100%);
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(12px);
+  border:2px solid rgba(0,106,78,.12);
+  border-radius:32px;
+  box-shadow:var(--shadow);
+  padding:clamp(24px,5vw,56px);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.doodle{
+  position:absolute;
+  color:var(--green);
+  opacity:.45;
+  pointer-events:none;
+  font-size:clamp(22px,4vw,38px);
+  animation:float 5s ease-in-out infinite;
+}
+.d1{left:4%;top:6%}.d2{right:5%;top:11%;animation-delay:1s}
+.d3{left:7%;bottom:9%;animation-delay:2s}.d4{right:7%;bottom:7%;animation-delay:3s}
+@keyframes float{50%{transform:translateY(-9px) rotate(6deg)}}
+.badge{
+  display:inline-block;
+  padding:8px 15px;
+  border-radius:999px;
+  background:var(--green-soft);
+  color:var(--green-dark);
+  font-weight:800;
+  letter-spacing:.03em;
+  font-size:.88rem;
+}
+h1{
+  margin:18px 0 10px;
+  color:var(--green);
+  font-size:clamp(2.2rem,7vw,5.2rem);
+  line-height:.98;
+  letter-spacing:-.045em;
+}
+.subtitle{
+  max-width:650px;
+  margin:0 auto;
+  font-size:clamp(1rem,2.5vw,1.2rem);
+  line-height:1.7;
+}
+.question{
+  margin:28px auto 12px;
+  font-size:clamp(1.35rem,4vw,2rem);
+  font-weight:900;
+}
+.buttons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+.btn{
+  border:0;
+  border-radius:999px;
+  padding:14px 28px;
+  min-width:150px;
+  cursor:pointer;
+  font-weight:900;
+  transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+  box-shadow:0 10px 24px rgba(0,0,0,.12);
+}
+.btn:hover{transform:translateY(-3px)}
+.yes{background:var(--green);color:white}
+.no{background:#f4dfe5;color:#6c2e3f}
+.no.locked{opacity:.5;cursor:not-allowed;transform:none}
+.no.roaming{
+  position:fixed;
+  z-index:30;
+  margin:0;
+  transition:left .35s cubic-bezier(.3,1.4,.5,1), top .35s cubic-bezier(.3,1.4,.5,1), opacity .2s;
+}
+.cat-stage{
+  display:none;
+  margin:20px auto 0;
+  justify-content:center;
+}
+.cat-stage.show{display:flex}
+.cat-stage img{
+  max-width:min(300px,78vw);
+  max-height:260px;
+  border-radius:20px;
+  border:6px solid white;
+  box-shadow:0 12px 32px rgba(0,0,0,.2);
+  animation:pop .45s cubic-bezier(.3,1.5,.5,1);
+}
+@keyframes pop{from{transform:scale(.4) rotate(-8deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
+.sorry-wall{
+  margin-top:26px;
+  font-size:.82rem;
+  line-height:1.5;
+  color:var(--green-dark);
+  opacity:.85;
+  word-break:break-word;
+}
+.hint{
+  min-height:28px;
+  margin-top:18px;
+  color:var(--green-dark);
+  font-weight:800;
+}
+.counter{
+  margin-top:5px;
+  font-size:.82rem;
+  opacity:.6;
+}
+.hidden{display:none!important}
+
+/* apology */
+#apologyPage{display:none}
+.apology-wrap{max-width:1050px}
+.apology-photo{
+  width:min(300px,78vw);
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center;
+  border-radius:28px;
+  border:8px solid white;
+  box-shadow:0 16px 45px rgba(0,0,0,.18);
+  transform:rotate(-2deg);
+  margin:8px auto 28px;
+}
+.eyebrow{color:var(--green);font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.letter{
+  background:#fffdf8;
+  border:1px dashed rgba(0,106,78,.35);
+  border-radius:24px;
+  padding:clamp(22px,5vw,42px);
+  text-align:left;
+  line-height:1.85;
+  font-size:1.05rem;
+  position:relative;
+}
+.letter:before{
+  content:"💚";
+  position:absolute;
+  right:20px;
+  top:-18px;
+  background:var(--cream);
+  border-radius:50%;
+  padding:8px;
+  font-size:25px;
+}
+.signature{
+  text-align:right;
+  margin-top:18px;
+  font-weight:900;
+  color:var(--green);
+  font-size:1.15rem;
+}
+.promise{
+  margin:28px 0 0;
+  padding:18px;
+  border-radius:18px;
+  background:var(--green-soft);
+  text-align:center;
+  font-weight:800;
+}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-top:28px;
+}
+.gallery figure{
+  margin:0;
+  background:white;
+  padding:8px 8px 12px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,70,50,.1);
+}
+.gallery img{
+  width:100%;
+  height:310px;
+  object-fit:cover;
+  border-radius:15px;
+  display:block;
+}
+.gallery figcaption{
+  padding:9px 5px 0;
+  font-size:.82rem;
+  font-weight:800;
+  opacity:.75;
+}
+.gallery figure:nth-child(2){transform:rotate(1.5deg)}
+.gallery figure:nth-child(3){transform:rotate(-1deg)}
+.gallery figure:nth-child(4){transform:rotate(1deg)}
+.gallery figure:nth-child(5){transform:rotate(-1.5deg)}
+.final{
+  margin-top:30px;
+  font-size:clamp(1.4rem,4vw,2.2rem);
+  color:var(--green);
+  font-weight:900;
+}
+.small{
+  margin-top:8px;
+  opacity:.7;
+}
+.hearts{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:10;
+}
+.heart{
+  position:absolute;
+  bottom:-30px;
+  animation:rise linear forwards;
+  font-size:24px;
+}
+@keyframes rise{
+  to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+.shake{animation:shake .4s ease}
+@keyframes shake{
+  25%{transform:translateX(-8px)}50%{transform:translateX(8px)}75%{transform:translateX(-5px)}
+}
+.cat{
+  font-size:clamp(4rem,15vw,8rem);
+  margin:8px 0;
+  animation:sad 1.4s ease-in-out infinite;
+}
+@keyframes sad{50%{transform:translateY(7px) rotate(-3deg)}}
+@media(max-width:650px){
+  .page{padding:14px}
+  .card{border-radius:24px;padding:25px 18px}
+  .gallery{grid-template-columns:1fr}
+  .gallery img{height:360px}
+  .btn{width:min(290px,100%)}
+}
+</style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<section class="page" id="startPage">
+  <div class="card">
+    <span class="doodle d1">♡</span><span class="doodle d2">✿</span>
+    <span class="doodle d3">☘</span><span class="doodle d4">♡</span>
+    <span class="badge">A very serious message from Laddooo™</span>
+    <h1>Roshmalaiiiii 💚</h1>
+    <p class="subtitle">
+      I have an extremely important question for you.
+      Please read this before judging the world's most guilty Laddooo.
+    </p>
+    <div class="question" id="question">Will you forgive your Laddooo? 🥺</div>
+    <div class="buttons">
+      <button class="btn yes" id="yesBtn">YES, I FORGIVE ❤️</button>
+      <button class="btn no" id="noBtn">NO 😤</button>
+    </div>
+    <div class="hint" id="hint"></div>
+    <div class="cat-stage" id="catStage"><img id="catImg" alt="A crying cat"></div>
+    <div class="counter" id="counter">You have 5 opportunities to bully Laddooo.</div>
+  </div>
+</section>
+
+<section class="page" id="apologyPage">
+  <div class="card apology-wrap">
+    <span class="doodle d1">♡</span><span class="doodle d2">✿</span>
+    <span class="doodle d3">☘</span><span class="doodle d4">♡</span>
+
+    <div class="eyebrow">The official apology department</div>
+    <h1>I'm Sorry, Roshmalaiiiii.</h1>
+
+    <img class="apology-photo" src="images/apology.jpg" alt="Laddooo apologizing">
+
+    <div class="letter">
+      <p><strong>Dear Roshmalaiiiii,</strong></p>
+
+      <p>
+        I know what happened was supposed to be a prank and I know you were
+        trying to tease me. But when I heard you saying that you felt like I
+        didn't have strong feelings for you because you were liking other boys
+        I reacted badly. 😭😭😭😭😭😭😭😭
+      </p>
+
+      <p>
+        I shouted at you in a really high tone, and I realize now that I
+        genuinely scared you. <strong>That part is on me.</strong> I should
+        never have made the person I love feel afraid of me.
+      </p>
+
+      <p>
+        You deserved a calm Laddooo but got a shouting Laddooo. 🥺🥺🥺🥺
+      </p>
+
+      <p>
+        I love you, Roshmalaiiiii. And I don't want my anger to become a reason
+        you ever feel unsafe, uncomfortable or scared around me. I will work
+        on controlling that reaction and communicating with you properly even
+        when pranking
+      </p>
+
+      <p>
+        So this is me a Votku Laddooo saying <strong>I'm really really sorry.
+        Please forgive me.</strong> 💚💚💚💚💚💚💚
+      </p>
+
+      <p class="sorry-wall">Sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry sorry"</p>
+
+      <div class="signature">— Your guilty Laddooo 🥺</div>
+    </div>
+
+    <div class="promise">
+      No excuses. No “but”. Just one promise:<br>
+      <strong>I will try to handle my anger better and never make you feel scared because of it.</strong>
+    </div>
+
+    <div class="final">Now come here, Roshmalaiiiii. 🫂💚</div>
+    <p class="small">P.S. You still owe Laddooo a little bit of mercy. 😭</p>
+
+    <div class="gallery">
+      <figure><img src="images/us-1.jpg" alt="Us together"><figcaption>My favourite person 💚</figcaption></figure>
+      <figure><img src="images/roshmalai-1.jpg" alt="Roshmalaiiiii"><figcaption>Look at that smile. 😭</figcaption></figure>
+      <figure><img src="images/us-2.jpg" alt="Us together"><figcaption>Us. That's the whole point.</figcaption></figure>
+      <figure><img src="images/us-3.jpg" alt="Us together"><figcaption>One tiny Laddooo + one Roshmalaiiiii</figcaption></figure>
+      <figure><img src="images/us-4.jpg" alt="Us together"><figcaption>Still choosing you. Always. ♡</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const hint = document.getElementById("hint");
+const counter = document.getElementById("counter");
+const question = document.getElementById("question");
+const startPage = document.getElementById("startPage");
+const apologyPage = document.getElementById("apologyPage");
+const hearts = document.getElementById("hearts");
+
+let noClicks = 0;
+
+const noStates = [
+  ["NO 😤", "Roshmalaiiiii... please don't do this to your Laddooo. 🥺"],
+  ["STILL NO 😭", "Okay okay, I deserve the punishment... but please? 🥹"],
+  ["WHY NOOO 😭", "Laddooo has officially entered begging mode. 🙇‍♂️"],
+  ["LAST NO?! 💔", "My heart cannot handle this. Look at my sad face. 😭"],
+  ["NO × 5?! 🫠", "FINE. Laddooo has surrendered. But the YES button is waiting... 💚"]
+];
+
+function burst(count=14){
+  for(let i=0;i<count;i++){
+    const h=document.createElement("div");
+    h.className="heart";
+    h.textContent=["💚","♡","✨","🌿"][Math.floor(Math.random()*4)];
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(2.5+Math.random()*2.5)+"s";
+    h.style.fontSize=(18+Math.random()*22)+"px";
+    hearts.appendChild(h);
+    setTimeout(()=>h.remove(),5500);
+  }
+}
+
+const catStage = document.getElementById("catStage");
+const catImg = document.getElementById("catImg");
+const cats = ["images/cat-1.png","images/cat-2.png","images/cat-3.png","images/cat-4.png"];
+cats.forEach(src => { const i = new Image(); i.src = src; }); // preload
+
+// Shuffled order so each click shows a different cat (5 clicks, 4 cats:
+// the 5th is a cat that is not the one shown just before it).
+let catQueue = [];
+let lastCat = null;
+function nextCat(){
+  if(!catQueue.length){
+    catQueue = cats.filter(c => c !== lastCat).sort(() => Math.random() - .5);
+  }
+  lastCat = catQueue.shift();
+  return lastCat;
+}
+
+function showCat(){
+  catImg.src = nextCat();
+  catStage.classList.add("show");
+  catImg.style.animation = "none";
+  void catImg.offsetWidth;
+  catImg.style.animation = "";
+}
+
+// Move the NO button to a random spot anywhere on screen.
+let lastPos = null;
+function moveNoButton(){
+  if(noBtn.parentElement !== document.body){
+    // Fixed positioning inside the blurred card is clipped to the card,
+    // so lift the button out to <body> to let it roam the whole screen.
+    document.body.appendChild(noBtn);
+    noBtn.classList.add("roaming");
+  }
+  const pad = 10;
+  const w = noBtn.offsetWidth, h = noBtn.offsetHeight;
+  const maxX = Math.max(pad, window.innerWidth - w - pad);
+  const maxY = Math.max(pad, window.innerHeight - h - pad);
+  let x, y, tries = 0;
+  do {
+    x = pad + Math.random() * (maxX - pad);
+    y = pad + Math.random() * (maxY - pad);
+    tries++;
+  } while (lastPos && Math.hypot(x - lastPos.x, y - lastPos.y) < 150 && tries < 25);
+  lastPos = {x, y};
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+}
+
+noBtn.addEventListener("click", ()=>{
+  if(noClicks >= 5) return;
+  noClicks++;
+  const [label,msg] = noStates[noClicks-1];
+
+  noBtn.textContent=label;
+  hint.textContent=msg;
+  counter.textContent=`NO attempt ${noClicks}/5`;
+
+  showCat();
+
+  if(noClicks===5){
+    noBtn.disabled=true;
+    noBtn.classList.add("locked");
+    question.innerHTML=`Laddooo has been defeated. 🥲<br><small>Only YES can save him now.</small>`;
+    counter.textContent="NO button: permanently defeated 💀";
+    burst(20);
+  }
+  moveNoButton();
+});
+
+yesBtn.addEventListener("click", ()=>{
+  startPage.style.display="none";
+  noBtn.style.display="none";
+  apologyPage.style.display="flex";
+  window.scrollTo({top:0,behavior:"instant"});
+  burst(35);
+  setTimeout(()=>burst(20),900);
+});
+
+window.addEventListener("resize",()=>{
+  if(lastPos && noBtn.classList.contains("roaming")) moveNoButton();
+});
+</script>
+</body>
+</html>
